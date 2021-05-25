@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn Docker automated deployment with Travis and AWS
         </a>
       </header>
     </div>
