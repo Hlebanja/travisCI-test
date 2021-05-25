@@ -1,0 +1,13 @@
+language: generic 
+
+sudo: required
+services:
+  - docker #travis will isntall a copy of docker
+
+before_install:
+  - docker build -t thto/frontend -f Dockerfile.dev .
+
+
+script:
+  - docker run -e CI=true thto/frontend npm run test -- --coverage
+
