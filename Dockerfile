@@ -13,6 +13,8 @@ RUN npm run build
 
 #Phase 2 - running
 FROM nginx
+#exposes the container port, specifically important for AWS elasticbean stalk
+EXPOSE 80 
 COPY --from=builder /app/build /usr/share/nginx/html
 #default command of nginx is to start the container, so does not need to be declared here
 
